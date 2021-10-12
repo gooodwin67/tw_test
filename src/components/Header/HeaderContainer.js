@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
-import { menuShowAC } from "../../redux/header-reducer";
+import { menuShowAC, signShowAC } from "../../redux/header-reducer";
 
 export class HeaderContainer extends React.Component {
     render () {
@@ -8,8 +8,11 @@ export class HeaderContainer extends React.Component {
         let menuShow = () => {
             this.props.store.dispatch(menuShowAC())
         }
+        let signShow = () => {
+            this.props.store.dispatch(signShowAC())
+        }
         return (
-            <Header store = {this.props.store} menuShow = {menuShow}/>    
+            <Header store = {this.props.store} menuShow = {menuShow} signShow = {signShow}/>    
         )
     }
     

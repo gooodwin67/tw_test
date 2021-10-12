@@ -13,6 +13,7 @@
     font-size: 17px;
     letter-spacing: 0.47em;
     color: #8596AD;
+    display: inline-block;
 }
 .icon-account {
     margin-right: 20px;
@@ -44,4 +45,18 @@
 .off_menu_show .off_menu {
     opacity: 1;
     z-index: 1;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.sign_block {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    top:50%;
+    left: 50%;
+    z-index: 9999;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    transition: 0.5s;
 }

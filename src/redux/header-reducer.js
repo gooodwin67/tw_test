@@ -1,8 +1,9 @@
 let initialState = {
-    showMenu: 0
+    showMenu: 0,
+    showSign: 0
 }
 
-const menuShowReducer = (state=initialState, action) => {
+const headerReducer = (state=initialState, action) => {
     switch (action.type) {
         case 'SHOW-MENU': {
                 return {
@@ -10,6 +11,12 @@ const menuShowReducer = (state=initialState, action) => {
                     showMenu: state.showMenu ? 0 : 1
                 }
         }
+        case 'SHOW-SIGN': {
+            return {
+                ...state,
+                showSign: state.showSign ? 0 : 1
+            }
+    }
         default:
             return state
     }
@@ -22,4 +29,10 @@ export const menuShowAC = () => {
     }
 }
 
-export default menuShowReducer;
+export const signShowAC = () => {
+    return {
+        type: 'SHOW-SIGN'
+    }
+}
+
+export default headerReducer;

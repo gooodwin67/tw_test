@@ -1,19 +1,15 @@
 import React from "react";
+import { Aboutpage } from "./Aboutpage/Aboutpage";
 import './Main.css'
-import vaweIcon from '../../images/icons/vawe.svg'
+import { Mainpage } from './Mainpage/Mainpage'
+import { Route } from "react-router-dom";
+
 
 export function Main() {
     return (
         <div className = 'main-block'>
-           <div className = 'main_h'>
-               <h1>ВИЗИТНАЯ КАРТОЧКА<br />ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-           </div>
-           <div className = 'main_btn'>
-               <span>Подробнее</span>
-           </div>
-           <div className = 'vawe-block'>
-               <img src = {vaweIcon} alt='' />
-           </div>
+            <Route path = '/' exact><Mainpage /></Route>
+            <Route path = '/about'><Aboutpage /></Route>
         </div>
     )
 }

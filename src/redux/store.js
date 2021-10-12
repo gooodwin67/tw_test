@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from "redux";
-import menuShowReducer from "./header-reducer";
+import headerReducer from "./header-reducer";
 
 let reducers = combineReducers({
-    HeaderPage: menuShowReducer
+    HeaderPage: headerReducer
 })
 
 let store = createStore(reducers);
